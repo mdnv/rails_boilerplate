@@ -1,0 +1,36 @@
+#toast-container > div {
+  -moz-box-shadow: 0 0 3px #999 !important;
+  -webkit-box-shadow: 0 0 3px #999 !important;
+  box-shadow: 0 0 3px #999 !important;
+  opacity: 0.9;
+  -ms-filter: alpha(Opacity=90);
+  filter: alpha(opacity=90)
+}
+
+.toast {
+  background-color: $navy;
+
+  &-success {
+    background-color: $navy;
+  }
+
+  &-error {
+    background-color: $red;
+  }
+
+  &-info {
+    background-color: $lazur;
+  }
+
+  &-warning {
+    background-color: $yellow;
+  }
+
+  &-top-full-width {
+    margin-top: 20px;
+  }
+
+  &-bottom-full-width {
+    margin-bottom: 20px;
+  }
+}

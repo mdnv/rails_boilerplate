@@ -1,0 +1,4 @@
+li class=('active' if sidebar_active? item)
+  = link_to send(item.path) do
+    i.m-r-sm class= item.icon
+    span.nav-label = t(item.name)

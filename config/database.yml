@@ -1,0 +1,25 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+  username: <%= ENV.fetch('DB_USERNAME') { 'root' } %>
+  password: <%= ENV.fetch('DB_PASSWORD') { '' } %>
+  host: <%= ENV.fetch('DB_HOST') { 'localhost' } %>
+  port: <%= ENV.fetch('DB_PORT') { '3306' } %>
+  # socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: <%= ENV.fetch('DB_NAME_DEVELOPMENT') { 'base_development' } %>
+
+test:
+  <<: *default
+  database: <%= ENV.fetch('DB_NAME_TEST') { 'base_test' } %>
+
+production:
+  <<: *default
+  database: <%= ENV.fetch('DB_NAME_PRODUCTION') { 'base_production' } %>
+  username: <%= ENV.fetch('PRODUCTION_DB_USERNAME') { 'root' } %>
+  password: <%= ENV.fetch('PRODUCTION_DB_PASSWORD') { '' } %>
+  host: <%= ENV.fetch('PRODUCTION_DB_HOST') { 'localhost' } %>
+  port: <%= ENV.fetch('PRODUCTION_DB_PORT') { '3306' } %>

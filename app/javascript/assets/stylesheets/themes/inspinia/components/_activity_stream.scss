@@ -1,0 +1,110 @@
+
+.stream {
+
+  position: relative;
+  padding: 10px 0;
+
+  &:first-child .stream-badge:before {
+    top: 10px;
+  }
+
+  &:last-child .stream-badge:before {
+    height: 30px;
+  }
+
+  .stream-badge {
+    width: 50px;
+
+    i {
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      padding: 6px;
+      color: lighten($text-color, 10%);
+      position: absolute;
+      background-color: #ffffff;
+      left: 8px;
+
+      &.fa-circle {
+        color: lighten($text-color, 40%);
+      }
+
+
+      &.bg-success {
+        color: #ffffff;
+        background-color: $blue;
+        border-color: $blue;
+      }
+
+      &.bg-primary {
+        color: #ffffff;
+        background-color: $navy;
+        border-color: $navy;
+      }
+
+      &.bg-warning {
+        color: #ffffff;
+        background-color: $yellow;
+        border-color: $yellow;
+      }
+
+      &.bg-info {
+        color: #ffffff;
+        background-color: $lazur;
+        border-color: $lazur;
+      }
+
+      &.bg-danger {
+        color: #ffffff;
+        background-color: $red;
+        border-color: $red;
+      }
+
+    }
+
+    &:before {
+      content: '';
+      width: 1px;
+      background-color: $border-color;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+
+    }
+
+  }
+
+  .stream-info {
+    font-size: 12px;
+    margin-bottom: 5px;
+
+    img {
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      margin-right: 2px;
+      margin-top: -4px;
+    }
+
+    .date {
+      color: lighten($text-color, 20%);
+      font-size: 80%;
+    }
+
+  }
+
+  .stream-panel {
+    margin-left: 55px;
+  }
+
+
+}
+
+.stream-small {
+  margin: 10px 0;
+
+  .label {
+    padding: 2px 6px;
+    margin-right: 2px;
+  }
+}

@@ -1,0 +1,18 @@
+- title t('views.titles.staffs.list')
+- breadcrumbs staffs: manage_staffs_path
+
+.col-md-4
+  = render 'search', q: @q
+
+.col-md-8
+  .btn-group.m-b.pull-right
+    = link_to t('views.actions.new'), new_manage_staff_path, class: 'btn btn-primary'
+
+  .ibox
+    .ibox-title
+      h5 = yield(:title)
+
+    .ibox-content
+
+      #js-staffs-table
+        = render 'staffs_table', q: @q, staffs: @staffs

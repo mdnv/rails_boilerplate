@@ -1,0 +1,17 @@
+ja:
+  notifications:
+    success: Thành công
+    error: Lỗi
+    alert: Cảnh báo
+    warning: Cảnh báo
+    info: Thông tin
+    errors:
+      unknown: Chưa xác định!
+      not_found: Không tìm thấy dữ liệu!
+      record_invalid: Dữ liệu không hợp lệ!
+      not_authorized_error: Không có quyền truy cập hay thực thi thao tác!
+    create_staff_successfully: Tạo điều hành viên thành công!
+    update_staff_successfully: Cập nhật điều hành viên thành công!
+
+  announcements:
+    no_record: Không có bản ghi nào!

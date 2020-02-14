@@ -1,0 +1,27 @@
+- title t('views.titles.staffs.edit', name: @staff.username)
+- breadcrumbs staffs: manage_staffs_path,
+              @staff.username => manage_staff_path(@staff),
+              edit: edit_manage_staff_path(@staff)
+
+= form_with model: [:manage, @staff], local: true, class: 'form-horizontal' do |f|
+  .col-md-8
+    .ibox
+      .ibox-content
+        .col-md-12
+          = render 'form', f: f, need_password: false, is_savable: f.object.savable?
+
+        = link_to manage_staffs_path(filter_params), class: 'btn btn-default m-r'
+          i.fa.fa-long-arrow-alt-left.m-r-sm
+          span = t('views.actions.back_to_list')
+
+        = f.button class: 'btn btn-primary'
+          i.fa.fa-check.m-r-sm
+          span = t('views.actions.save')
+
+  .col-md-4
+    .ibox
+      .ibox-title
+        h5 = Staff.human_attribute_name :avatar
+
+      .ibox-content
+        = render 'avatar_field', f: f

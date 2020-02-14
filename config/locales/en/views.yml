@@ -1,0 +1,49 @@
+en:
+  views:
+    navigation_items:
+      home: Home
+      dashboard: Dashboard
+      staffs: Staffs
+      users: Users
+      new: Add new
+      edit: Edit
+      show: Information
+
+    titles:
+      dashboard:
+        index: Dashboard
+      staffs:
+        sign_in: Staff sign in
+        list: Staffs list
+        new: Add new staff
+        edit: 'Edit staff: %{name}'
+        show: 'Staff information: %{name}'
+
+    actions:
+      sign_in: Sign in
+      sign_out: Sign out
+      new: New
+      create: Create
+      edit: Edit
+      update: Update
+      destroy: Destroy
+      save: Save
+      filter: Filter
+      advanced_filter: Advanced filter
+      search: Search
+      remove_filter: Remove filter
+      back_to_list: Back to list
+
+    forms:
+      include_blank: -- Choose one --
+
+    confirmations:
+      sign_out: Do you really want to log out?
+      destroy: Do you really want to destroy this record?
+
+    placeholders:
+      staff:
+        username_contains: Username contains...
+        email_contains: Email contains...
+        created_at_from: Created from...
+        created_at_to: Created to...

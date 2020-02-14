@@ -1,0 +1,52 @@
+/* Checkboxes */
+.i-checkbox {
+  padding: 0 15px;
+
+  input[type='checkbox'] {
+    display: none;
+
+    + label::after {
+      content: '';
+    }
+
+    &:checked + label::after {
+      content: '';
+      border: 1px solid $navy;
+      background-color: $navy;
+    }
+
+    &:focus + label::before {
+      outline: 0;
+    }
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    font-weight: normal;
+    padding-top: 5px;
+    padding-left: 28px;
+
+    &:before, &:after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+    }
+
+    &:before {
+      width: 21px;
+      height: 21px;
+      top: 3px;
+      left: 0;
+      border: 1px solid #d2d2d2;
+      border-radius: 1px;
+    }
+
+    &:after {
+      width: 15px;
+      height: 15px;
+      top: 6px;
+      left: 3px;
+    }
+  }
+}

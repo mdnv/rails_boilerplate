@@ -1,0 +1,45 @@
+- title t('views.titles.staffs.show', name: @staff.username)
+- breadcrumbs staffs: manage_staffs_path,
+              @staff.username => manage_staff_path(@staff)
+
+.col-md-3.text-center
+  = image_tag @staff.avatar_image(Settings.images.sizes.avatar_medium), class: 'file-uploader-preview m-b-md'
+
+.col-md-9
+  .ibox
+    .ibox-content
+      .form-group
+        label.control-label.required
+          = Staff.human_attribute_name :username
+        = text_field_tag :username, @staff.username, class: 'form-control', disabled: true
+
+      .form-group
+        label.control-label.required
+          = Staff.human_attribute_name :email
+        = text_field_tag :email, @staff.email, class: 'form-control', disabled: true
+
+      .form-group
+        label.control-label.required = Staff.human_attribute_name :role
+        = select_tag :role, options_for_select(staff_roles_for_select),
+                            selected: @staff.role,
+                            class: 'form-control',
+                            disabled: true
+
+      .form-group
+        label.control-label.required
+          = Staff.human_attribute_name :created_at
+        = text_field_tag :created_at, l(@staff.created_at), class: 'form-control', disabled: true
+
+      .form-group
+        label.control-label.required
+          = Staff.human_attribute_name :updated_at
+        = text_field_tag :updated_at, l(@staff.updated_at), class: 'form-control', disabled: true
+
+      = link_to manage_staffs_path(filter_params), class: 'btn btn-default m-r'
+        i.fa.fa-long-arrow-alt-left.m-r-sm
+        span = t('views.actions.back_to_list')
+
+      - if can(@staff).edit?
+        = link_to edit_manage_staff_path(@staff, filter_params), class: 'btn-white btn btn-sm', title: t('views.actions.edit')
+          i.fa.fa-cog.m-r-sm
+          span = t('views.actions.edit')

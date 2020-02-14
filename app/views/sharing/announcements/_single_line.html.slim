@@ -1,0 +1,5 @@
+.col-md-12
+  - contents.each do |content|
+    .text-left.alert.alert-dismissable class=klass
+      == content
+      = button_tag '×', data: {dismiss: 'alert'}, aria: {hidden: true}, class: 'close'

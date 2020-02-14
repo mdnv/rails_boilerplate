@@ -1,0 +1,50 @@
+.ibox
+  .ibox-title
+    h5 = t('views.actions.advanced_filter')
+    .ibox-tools
+      a.collapse-link
+        i.fa.fa-chevron-up
+      a.close-link
+        i.fa.fa-times
+
+  .ibox-content
+    = search_form_for @q, url: manage_staffs_path, remote: true do |f|
+      .form-group
+        label = Staff.human_attribute_name :username
+        = f.text_field :username_cont, placeholder: t('views.placeholders.staff.username_contains'),
+                                        class: 'form-control'
+
+      .form-group
+        label = Staff.human_attribute_name :email
+        = f.text_field :email_cont, placeholder: t('views.placeholders.staff.email_contains'),
+                                    class: 'form-control'
+
+      .form-group
+        label = Staff.human_attribute_name :role
+        = f.select :role_eq, staff_roles_for_select_search,
+                             {include_blank: t('views.forms.include_blank')},
+                             class: 'form-control'
+
+      .form-group
+        label = Staff.human_attribute_name :status
+        = f.select :status_eq, staff_statuses_for_select_search,
+                               {include_blank: t('views.forms.include_blank')},
+                               class: 'form-control'
+
+      .form-group
+        label = Staff.human_attribute_name :created_at
+        .input-daterange.input-group.datepicker
+          = f.text_field :created_at_gteq, class: 'form-control',
+                                           placeholder: t('views.placeholders.staff.created_at_from'),
+                                           autocomplete: 'off'
+          .input-group-addon ~
+          = f.text_field :created_at_lteq, class: 'form-control',
+                                           placeholder: t('views.placeholders.staff.created_at_to'),
+                                           autocomplete: 'off'
+
+      .btn-group
+        = f.button class: 'btn btn-primary', name: nil
+          i.fa.fa-filter.m-r-sm
+          span = t('views.actions.search')
+
+        = f.submit t('views.actions.remove_filter'), type: 'reset', class: 'btn btn-default'

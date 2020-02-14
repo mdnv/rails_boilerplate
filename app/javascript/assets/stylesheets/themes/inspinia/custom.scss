@@ -1,0 +1,36 @@
+.navbar {
+  z-index: 9;
+}
+
+.img {
+  &-max-width {
+    max-width: 100%;
+  }
+  &-cover {
+    object-fit: cover;
+  }
+}
+
+.display {
+  &-inline-block {
+    display: inline-block;
+  }
+  &-block {
+    display: block;
+  }
+  &-none {
+    display: none;
+  }
+}
+
+.background {
+  &-none {
+    background-color: transparent !important;
+  }
+}
+
+.fa {
+  + span {
+    padding-left: 5px;
+  }
+}

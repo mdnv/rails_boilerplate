@@ -1,0 +1,3 @@
+exclude:
+  - 'app/assets/stylesheets/themes/**/*'
+  - 'app/javascript/assets/stylesheets/themes/**/*'

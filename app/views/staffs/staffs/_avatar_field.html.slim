@@ -1,0 +1,18 @@
+.file-uploader.text-center class=('has-error' if f.object.errors.key?(:avatar))
+  = image_tag f.object.avatar_image, class: 'file-uploader-preview'
+  .clearfix
+  label.btn.btn-default.btn-file for='staff_avatar'
+    | Select file
+  = f.file_field :avatar
+  = error_messages_of f.object, :avatar
+
+javascript:
+  $(document.body).on('change', '#staff_avatar', function () {
+    if (this.files && this.files[0]) {
+      var reader = new FileReader()
+      reader.onload = function(e) {
+        $('.file-uploader-preview').attr('src', e.target.result)
+      }
+      reader.readAsDataURL(this.files[0])
+    }
+  })

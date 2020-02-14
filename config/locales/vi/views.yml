@@ -1,0 +1,49 @@
+vi:
+  views:
+    navigation_items:
+      home: Trang chủ
+      dashboard: Trang quản trị
+      staffs: Điều hành viên
+      users: Thành viên
+      new: Thêm mới
+      edit: Sửa thông tin
+      show: Thông tin chi tiết
+
+    titles:
+      dashboard:
+        index: Trang quản trị
+      staffs:
+        sign_in: Đăng nhập trang quản trị
+        list: Danh sách điều hành viên
+        new: Thêm điều hành viên
+        edit: 'Sửa thông tin điều hành viên: %{name}'
+        show: 'Thông tin điều hành viên: %{name}'
+
+    actions:
+      sign_in: Đăng nhập
+      sign_out: Đăng xuất
+      new: Thêm mới
+      create: Tạo
+      edit: Sửa thông tin
+      update: Cập nhật
+      destroy: Loại bỏ
+      save: Lưu
+      filter: Lọc
+      advanced_filter: Lọc nâng cao
+      search: Tìm kiếm
+      remove_filter: Bỏ lọc
+      back_to_list: Về trang danh sách
+
+    forms:
+      include_blank: -- Chọn giá trị --
+
+    confirmations:
+      sign_out: Bạn có chắc muốn đăng xuất?
+      destroy: Bạn có chắc chắn muốn loại bỏ bản ghi này?
+
+    placeholders:
+      staff:
+        username_contains: Tên tài khoản chứa...
+        email_contains: Email chứa...
+        created_at_from: Tạo từ ngày...
+        created_at_to: Đến ngày...

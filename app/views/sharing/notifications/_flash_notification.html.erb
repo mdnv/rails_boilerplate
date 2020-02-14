@@ -1,0 +1,5 @@
+<% notifications.each do |type, content| %>
+  <script>
+    window['toastr']["<%= type %>"]("<%= content %>", "<%= t("notifications.#{type}") %>")
+  </script>
+<% end %>

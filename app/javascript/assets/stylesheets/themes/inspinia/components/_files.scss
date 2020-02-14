@@ -1,0 +1,17 @@
+.file {
+  &-uploader {
+    input[type='file'] {
+      display: none;
+    }
+
+    & &-preview {
+      max-width: 100%;
+      margin-bottom: 15px;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+notification_types:
+  notice:
+    type: success
+    klass: alert-success
+  success:
+    type: success
+    klass: alert-success
+  alert:
+    type: error
+    klass: alert-danger
+  error:
+    type: error
+    klass: alert-danger
+  info:
+    type: info
+    klass: alert-info
+
+sidebar_navigation_items:
+  - name: views.navigation_items.dashboard
+    icon: fa fa-tachometer-alt
+    controller: dashboard
+    path: manage_root_path
+  - name: views.navigation_items.staffs
+    icon: fa fa-user
+    controller: staffs
+    path: manage_staffs_path
+
+image_params:
+  - avatar
+  - thumbnail
+
+images:
+  default_avatar: http://www.gravatar.com/avatar/?d=identicon&size=%{size}
+  sizes:
+    avatar: 80
+    avatar_medium: 120

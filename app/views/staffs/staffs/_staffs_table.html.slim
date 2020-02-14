@@ -1,0 +1,36 @@
+- if staffs.any?
+  .table-responsive
+    table.table.table-striped
+      thead
+        tr
+          th = sort_link q, :id, Staff.human_attribute_name(:id), {action: :index}, remote: true
+          th = sort_link q, :username, Staff.human_attribute_name(:username), {action: :index}, remote: true
+          th = sort_link q, :email, Staff.human_attribute_name(:email), {action: :index}, remote: true
+          th = sort_link q, :role, Staff.human_attribute_name(:role), {action: :index}, remote: true
+          th = sort_link q, :status, Staff.human_attribute_name(:status), {action: :index}, remote: true
+          th
+      tbody
+        - staffs.each do |staff|
+          tr
+            td = staff.id
+            td == link_to staff.username, manage_staff_path(staff, filter_params), title: staff.username
+            td = staff.email
+            td = Staff.human_attribute_name "role.#{staff.role}"
+            td = Staff.human_attribute_name "status.#{staff.status}"
+            td
+              .btn-group
+                - if can(staff).edit?
+                  = link_to edit_manage_staff_path(staff, filter_params), class: 'btn-white btn btn-xs',
+                                                                          title: t('views.actions.edit')
+                    i.fa.fa-cog
+                - if can(staff).destroy?
+                  = link_to manage_staff_path(staff, filter_params), class: 'btn-white btn btn-xs',
+                                                                     method: :delete,
+                                                                     data: {confirm: t('views.confirmations.destroy')},
+                                                                     title: t('views.actions.destroy')
+                    i.fa.fa-trash
+  .text-center
+    = paginate staffs, remote: true
+- else
+  .row.m-b-n
+    = render_announcements t('announcements.no_record'), type: 'info'

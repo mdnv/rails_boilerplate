@@ -1,0 +1,24 @@
+.middle-box.text-center.loginscreen.animated.fadeInDown
+  h1.logo-name INKI
+
+  = form_for resource, as: resource_name, url: session_path(resource_name), role: 'form' do |f|
+    .form-group
+      .input-group.m-b
+        span.input-group-addon
+          i.fa.fa-user-secret
+        = f.email_field :email, placeholder: User.human_attribute_name(:email),
+                                required: true,
+                                class: 'form-control'
+    .form-group
+      .input-group.m-b
+        span.input-group-addon
+          i.fa.fa-unlock
+        = f.password_field :password, placeholder: User.human_attribute_name(:password),
+                                      required: true,
+                                      class: 'form-control'
+
+    button.btn.btn-primary.block.full-width.m-b type='submit'
+      = t('views.actions.sign_in')
+
+  p.m-t
+    small Inspinia we app framework base on Bootstrap 3 &copy; 2014

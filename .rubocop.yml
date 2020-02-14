@@ -1,0 +1,53 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'Gemfile'
+    - 'db/fixtures/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'Rakefile'
+
+Style/StringLiterals:
+  Exclude:
+    - 'bin/spring'
+    - 'bin/yarn'
+    - 'config/puma.rb'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/test_helper.rb'
+    - 'test/channels/application_cable/connection_test.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  Exclude:
+    - 'config/**/*'
+    - 'app/models/application_record.rb'
+    - 'app/channels/application_cable/connection.rb'
+    - 'app/channels/application_cable/channel.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/controllers/application_controller.rb'
+    - 'app/jobs/application_job.rb'
+    - 'db/seeds.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Style/NumericPredicate:
+  EnforcedStyle: comparison

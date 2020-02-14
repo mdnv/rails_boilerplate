@@ -1,0 +1,17 @@
+en:
+  notifications:
+    success: Success
+    error: Error
+    alert: Alert
+    warning: Warning
+    info: Info
+    errors:
+      unknown: Unknown!
+      not_found: Not found!
+      record_invalid: Invalid data!
+      not_authorized_error: Not authorized error!
+    create_staff_successfully: Create staff successfully!
+    update_staff_successfully: Update staff successfully!
+
+  announcements:
+    no_record: No record

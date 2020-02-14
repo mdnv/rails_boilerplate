@@ -1,0 +1,78 @@
+vi:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: phải được đồng ý
+      blank: không thể để trắng
+      confirmation: không khớp với xác nhận
+      empty: không thể rỗng
+      equal_to: phải bằng %{count}
+      even: phải là số chẵn
+      exclusion: đã được giành trước
+      greater_than: phải lớn hơn %{count}
+      greater_than_or_equal_to: phải lớn hơn hoặc bằng %{count}
+      inclusion: không có trong danh sách
+      invalid: không hợp lệ
+      less_than: phải nhỏ hơn %{count}
+      less_than_or_equal_to: phải nhỏ hơn hoặc bằng %{count}
+      not_a_number: không phải là số
+      not_an_integer: phải là một số nguyên
+      odd: phải là số lẻ
+      other_than: cần phải khác %{count}
+      present: cần phải để trắng
+      taken: đã có
+      too_long: quá dài (tối đa %{count} ký tự)
+      too_short: quá ngắn (tối thiểu %{count} ký tự)
+      wrong_length: độ dài không đúng (phải là %{count} ký tự)
+
+    template:
+      body: 'Có lỗi với các mục sau:'
+      header:
+        one: 1 lỗi ngăn không cho lưu %{model} này
+        other: "%{count} lỗi ngăn không cho lưu %{model} này"
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Có các lỗi sau: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Không thể xóa do tồn tại đối tượng phụ thuộc %{record}
+          has_many: Không thể xóa do tồn tại một số đối tượng phụ thuộc %{record}
+
+    models:
+      user: Người dùng
+
+    attributes:
+      user:
+        username: Tên tài khoản
+        email: Email
+        encrypted_password: Mật khẩu mã hoá
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        remember_created_at: Ghi nhớ được lưu lúc
+        reset_password_sent_at: Yêu cầu đặt lại mật khẩu gửi lúc
+        reset_password_token: Mã đặt lại mật khẩu
+        updated_at: Được cập nhật lúc
+        created_at: Được tạo lúc
+
+      staff:
+        username: Tên tài khoản
+        email: Email
+        encrypted_password: Mật khẩu mã hoá
+        password: Mật khẩu
+        role: Vai trò
+        status: Trạng thái
+        password_confirmation: Xác nhận mật khẩu
+        remember_created_at: Ghi nhớ được lưu lúc
+        reset_password_sent_at: Yêu cầu đặt lại mật khẩu gửi lúc
+        reset_password_token: Mã đặt lại mật khẩu
+        updated_at: Được cập nhật lúc
+        created_at: Được tạo lúc
+
+      staff/role:
+        administrator: Quản trị viên
+        moderator: Kiểm duyệt viên
+
+      staff/status:
+        disactive: Không kích hoạt
+        active: Kích hoạt

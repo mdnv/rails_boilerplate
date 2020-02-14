@@ -1,0 +1,34 @@
+/* Select2 custom styles */
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  border-color: $border-color;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-color: $navy;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $navy;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border-color: $border-color;
+}
+
+.select2-dropdown {
+  border-color: $border-color;
+
+  input:focus {
+    outline: none;
+  }
+}
+
+.select2-selection {
+  outline: none;
+}
+
+.ui-select-container.ui-select-bootstrap .ui-select-choices-row.active > a {
+  background-color: $navy;
+}
